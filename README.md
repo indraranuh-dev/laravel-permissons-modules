@@ -26,6 +26,7 @@ Laravel package which was created to manage your large Laravel app using modules
 log into your <code>root</code> project, and run the following command at the <code>terminal/command prompt</code>
 
 -   composer install
+-   npm install
 -   cp .env.example .env
 -   php artisan key:generate
 -   php artisan migrate --seed
