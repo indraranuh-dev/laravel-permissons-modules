@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -64,7 +65,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $uuid = Str::uuid()->getHex();
+        $randStart = random_int(0, 12);
         return User::create([
+            'id' => substr($uuid, $randStart, 20),
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),

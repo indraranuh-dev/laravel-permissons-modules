@@ -1,0 +1,23 @@
+{
+    "name": "app/dashboard",
+    "description": "",
+    "authors": [{
+        "name": "Indra Ranuh    ",
+        "email": "morphlingcoding@gmail.com"
+    }],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Dashboard\\Providers\\DashboardServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Dashboard\\": ""
+        }
+    }
+}
